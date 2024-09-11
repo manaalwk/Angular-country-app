@@ -1,0 +1,23 @@
+<div class="search-container">
+    <input type="text" ng-model="searchQuery" placeholder="Search for a country...">
+    <select ng-model="regionFilter">
+        <option value="">Filter by Region</option>
+        <option value="Africa">Africa</option>
+        <option value="Americas">Americas</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
+    </select>
+</div>
+
+<div class="country-grid">
+    <div class="country-card" ng-repeat="country in countries | filter:searchQuery | filter:{region: regionFilter}">
+        <a href="#/country/{{country.name}}">
+            <img ng-src="{{country.flags.png}}" alt="{{country.name}} flag">
+            <h3>{{country.name}}</h3>
+            <p><strong>Population:</strong> {{country.population | number}}</p>
+            <p><strong>Region:</strong> {{country.region}}</p>
+            <p><strong>Capital:</strong> {{country.capital}}</p>
+        </a>
+    </div>
+</div>

@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+input[type="text"], select {
+    padding: 10px;
+    font-size: 16px;
+    width: 200px;
+}
+
+.country-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.country-card {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.country-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.country-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.country-detail {
+    padding: 20px;
+}
+
+.country-info {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.country-info img {
+    width: 150px;
+    height: auto;
+}
+
+.country-info p {
+    font-size: 16px;
+}
